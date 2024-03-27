@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        First Floor Lab - Contact Us
+    </title>
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon"></link>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+</head>
+<body>
+
+    <header>
+        <!-- Small picture button to go to homepage -->
+        <a href="index.html">
+            <img src="./images/favicon.png" alt="Go to Homepage" width="66" height="40">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="people.html">People</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="teaching.html">Teaching</a></li>
+                <li><a href="contact_us.html"><span class="current_page"><strong>Contact Us</strong></span></a></li>    
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="address-map-container">
+            <div class="address-info">
+                <p>BIOCEV</p>
+                <p>Průmyslová 595</p>
+                <p>252 50 Vestec</p>
+                <p>Czech Republic</p>
+                <br>
+                <p><strong>Email:  </strong><a href="mailto:paveldolezal@gmail.com">paveldolezal@gmail.com</a></p>
+                <p><strong>Phone:  </strong>+420 XXX XXX XXX</p>
+            </div>
+        
+            <div id="map-container">
+                <div id="map"></div>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        function initMap() {
+            // Replace LATITUDE and LONGITUDE with the coordinates of your desired location
+            var myLatLng = { lat: 49.9822853478451, lng: 14.487355202343617 };
+
+            // Create a new map centered at the specified location
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15, // Adjust the zoom level as needed
+                center: myLatLng
+            });
+
+            // Add a marker for the specified location
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Pinned Location'
+            });
+        }
+    </script>
+
+    <script>
+        function mapLoadError() {
+            document.getElementById('map').innerHTML = 
+                '<img src="./images/fallback_map.png" alt="Static Map" style="width:100%; height:100%;">';
+        }
+    </script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2RCOx_w2PMeMIgXEp4Iqa4LO-t6NxKMs&callback=initMap">
+    </script>
+
+    <!-- <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer> -->
+
+</body>
+</html>

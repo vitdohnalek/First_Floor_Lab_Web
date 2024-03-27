@@ -1,0 +1,243 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    /* background-color: #333; */
+    /* background-image: url('./images/cyst.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    background-color: rgba(0, 0, 0, 0.42);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0; /* Position at the top of the viewport*/
+    width: 100%; /* Full width of the screen */
+    z-index: 1000; /* Ensure it is above other content */ 
+}
+
+body.index_page {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    background-image: url('./images/cyst.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body.index_page header {
+    background-image: url('./images/transparent.png');
+}
+
+body.index_page main {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 1rem;
+    margin-right: 0.2rem;
+}
+
+nav ul li a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem;
+    background-color: #000;
+}
+
+nav ul li:last-child a {
+    padding-right: 2.5rem;
+    /* margin-right: 2rem; */
+}
+
+/* Ensure the hover effect applies uniformly, including any specific padding adjustments */
+nav ul li:last-child a:hover {
+    /* padding: 1rem;  */
+    background-color: #000;
+}
+
+.current_page {
+    color: #eee;
+    /* text-decoration: underline; */
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    margin-top: 5rem;
+    /* padding-bottom: 10%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url('./images/cyst.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+section {
+    color: #eee;
+    margin-left: 20%;
+    margin-top: 2rem;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff; 
+    font-size: small;
+    padding: 20px; 
+}
+
+/* Research Page Classes */
+
+.research_body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-image: url('./images/cyst.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.research_section {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+    color: whitesmoke;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+ 
+
+
+/* People Page Classes */
+.people_body {
+    margin-top: 10%; /* Remove default margin */
+    min-height: 100%;
+    color: whitesmoke;
+    padding: 0; /* Remove default padding */
+    background-image: url('./images/cyst.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.people_main {
+    margin-left: 5%;
+}
+
+.lab_members {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.lab_members p a {
+    text-decoration: underline;
+    color: whitesmoke;
+}
+
+.person {
+    text-align: center;
+}
+
+.person img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.person .person_info {
+    margin-top: 10px;
+}
+
+/* Publications Page Classes */
+
+/* Teaching Page Classes */
+
+.Subjects li a {
+    text-decoration: underline;
+    text-decoration-color: #333;
+    color: #333;
+}
+
+.Teaching_materials {
+    list-style-type: none;
+}
+
+.Teaching_materials li {
+    margin-bottom: 100px;
+}
+
+.Teaching_materials li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* About Us Page Classes */
+.address-map-container {
+    padding: 5rem 5rem 0 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the start of the flex container */
+}
+
+.address-map-container p a {
+    text-decoration: underline;
+    color: #000;
+}
+
+.address-info {
+    flex: 1; /* Take up 1 part of the container */
+    padding-right: 20px; /* Add some padding between the text and map */
+}
+
+#map-container {
+    flex: 1; /* Take up 1 part of the container */
+    height: 400px; /* Set a fixed height for the map */
+    border: 1px #000 solid;
+}
+
+#map {
+    width: 100%; /* Take the full width of the map container */
+    height: 100%; /* Take the full height of the map container */
+}
+
+
+
+
