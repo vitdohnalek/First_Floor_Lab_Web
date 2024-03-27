@@ -6,15 +6,12 @@
     <title>
         First Floor Lab - Contact Us
     </title>
-    <!-- Favicon -->
-    <link rel="icon" href="./images/favicon.png" type="image/x-icon"></link>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
-<body>
 
+<body class="contact_us_page_body">
     <header>
-        <!-- Small picture button to go to homepage -->
         <a href="index.html">
             <img src="./images/favicon.png" alt="Go to Homepage" width="66" height="40">
         </a>
@@ -24,12 +21,13 @@
                 <li><a href="people.html">People</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="contact_us.html"><span class="current_page"><strong>Contact Us</strong></span></a></li>    
+                <li><a href="contact_us.html"><span class="current_page">Contact Us</span></a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <div class="address-map-container">
+        <section class="contact_us_section">
             <div class="address-info">
                 <p>BIOCEV</p>
                 <p>Průmyslová 595</p>
@@ -45,15 +43,20 @@
             </div>
         </div>
     </main>
-    
+
+    <footer>
+        <div class="gradient-bar"></div>
+    </footer>
+
+    <script src="app.js"></script>
     <script>
+        //MAP
         function initMap() {
-            // Replace LATITUDE and LONGITUDE with the coordinates of your desired location
             var myLatLng = { lat: 49.9822853478451, lng: 14.487355202343617 };
 
             // Create a new map centered at the specified location
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15, // Adjust the zoom level as needed
+                zoom: 15,
                 center: myLatLng
             });
 
@@ -65,7 +68,6 @@
             });
         }
     </script>
-
     <script>
         function mapLoadError() {
             document.getElementById('map').innerHTML = 
@@ -76,10 +78,6 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2RCOx_w2PMeMIgXEp4Iqa4LO-t6NxKMs&callback=initMap">
     </script>
-
-    <!-- <footer>
-        <p>&copy; 2024 Your Website. All rights reserved.</p>
-    </footer> -->
-
 </body>
+
 </html>

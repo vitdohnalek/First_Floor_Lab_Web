@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        First Floor Lab - Home
+        First Floor Lab
     </title>
-    <!-- Favicon -->
-    <link rel="icon" href="./images/favicon.png" type="image/x-icon"></link>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 
-<body class="index_page">
+<body class="main_page_body">
     <header>
-        <!-- Small picture button to go to homepage -->
         <a href="index.html">
             <img src="./images/favicon.png" alt="Go to Homepage" width="66" height="40">
         </a>
@@ -23,24 +21,25 @@
                 <li><a href="people.html">People</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="contact_us.html">Contact Us</a></li>    
+                <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-<main>
-    <br><br><br><br><br><br><br><br><br>
-    <section>
-        <h2>First Floor Lab</h2>
-        <p>Department of Parasitology Charles University in Prague</p>
-        <!-- Button to navigate to the research page -->
-        <button onclick="window.location.href='research.html'">More</button>
-    </section>
-</main>
+    <main>
+        <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+        <section class="welcome">
+            <h1>First Floor Lab</h1>
+            <p>Department of Parasitology, Charles University in Prague</p>
+            <button class="welcome_button" onclick="window.location.href='research.html'">More</button>
+        </section>
+    </main>
 
-<!-- <footer>
-    <p>&copy; 2024 Your Website. All rights reserved.</p>
-</footer> -->
+    <footer>
+        <div class="gradient-bar"></div>
+    </footer>
 
+    <script src="app.js"></script>
 </body>
+
 </html>
