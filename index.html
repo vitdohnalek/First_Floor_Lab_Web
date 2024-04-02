@@ -15,8 +15,9 @@
         <a href="index.html">
             <img src="./images/favicon.png" alt="Go to Homepage" width="66" height="40">
         </a>
+        <button class="menu-toggle">&#9776;</button>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="research.html">Research</a></li>
                 <li><a href="people.html">People</a></li>
                 <li><a href="publications.html">Publications</a></li>
@@ -28,11 +29,17 @@
 
     <main>
         <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
-        <section class="welcome">
-            <h1>First Floor Lab</h1>
-            <p>Department of Parasitology, Charles University in Prague</p>
-            <button class="welcome_button" onclick="window.location.href='research.html'">More</button>
-        </section>
+        <div class="welcome_flex">
+            <section class="welcome">
+                <h1>First Floor Lab</h1>
+                <hr>
+                <p>Department of Parasitology, Charles University in Prague</p>
+                <button class="welcome_button" onclick="window.location.href='research.html'">More</button>
+            </section>
+            <section class="giardia">
+                <img src="./images/giardias_comming_v2.png" alt="Giardia" width="1509" height="849">
+            </section>
+        </div>
     </main>
 
     <footer>
