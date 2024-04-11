@@ -411,7 +411,7 @@ section {
 }
 
 .people_section {
-    color: var(--DARK-FONT-COLOR);
+    color: #b6b4b4f1;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -421,8 +421,9 @@ section {
 
 .person_container {
     /* background: rgba(245, 245, 245, 0.301); */
-    background: radial-gradient(rgba(240,240,240,0.4),rgba(240,240,240,0.15));
-    border-radius: 20%;
+    /* background: radial-gradient(rgba(240,240,240,0.4),rgba(240,240,240,0.15)); */
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
     padding: 20px;
     border: solid 1px var(--DARK-FONT-COLOR);
     text-align: center;
