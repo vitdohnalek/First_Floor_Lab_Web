@@ -423,6 +423,7 @@ section {
     /* background: rgba(245, 245, 245, 0.301); */
     /* background: radial-gradient(rgba(240,240,240,0.4),rgba(240,240,240,0.15)); */
     background: rgba(0, 0, 0, 0.3);
+    min-width: 300px;
     border-radius: 20px;
     padding: 20px;
     border: solid 1px var(--DARK-FONT-COLOR);
@@ -447,6 +448,13 @@ section {
     white-space: nowrap;
 }
 
+.person_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
 .person_interests {
     margin-top: 1rem;
     text-align: center;
@@ -455,6 +463,10 @@ section {
 .person_contact {
     margin-top: 0.5rem;
     white-space: nowrap;
+}
+
+.person_contact:hover {
+    color: var(--LIGHT-FONT-COLOR);
 }
 
 /* PUBLICATIONS PAGE */
