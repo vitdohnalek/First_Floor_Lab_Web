@@ -598,6 +598,7 @@ section {
 /* CONTACT US PAGE */
 .contact_us_page_body {
     height: 100vh;
+    padding-top: 3rem;
     overflow: hidden;
 }
 
@@ -625,6 +626,19 @@ section {
     margin: 2rem;
     flex: 1;
     padding-right: 20px;
+}
+
+#lab-container img {
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-bottom: 2;
+    border-radius: 10%;
+    width: auto;
+    height: auto;
+    max-height: 40rem;
+    box-sizing: border-box;
+    display: block;
 }
 
 #map-container {
