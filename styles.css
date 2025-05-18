@@ -636,7 +636,7 @@ section {
     border-radius: 10%;
     width: auto;
     height: auto;
-    max-height: 40rem;
+    max-height: 65vh;
     box-sizing: border-box;
     display: block;
 }
