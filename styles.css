@@ -262,7 +262,7 @@ section {
     content: '';
     position: fixed;
     inset: 0;
-    background: rgba(17, 17, 19, 0.55);
+    background: rgba(17, 17, 19, 0.4);
     z-index: 0;
     pointer-events: none;
 }
@@ -336,7 +336,7 @@ section {
     transform: translateY(-50%);
     width: 45%;
     z-index: 0;
-    opacity: 0.12;
+    opacity: 1;
 }
 
 @media (max-width: 640px) {
@@ -352,7 +352,7 @@ section {
 
     .giardia {
         width: 70%;
-        opacity: 0.08;
+        opacity: 0.7;
     }
 }
 
