@@ -7,6 +7,9 @@
         First Floor Lab - Contact Us
     </title>
     <link rel="icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 
@@ -30,7 +33,7 @@
     <main>
         <section class="contact_us_section">
             <div class="address-info">
-                <p><strong>Adress:</strong></p>
+                <p><strong>Address:</strong></p>
                 <p></p>
                 <p>BIOCEV</p>
                 <p>Průmyslová 595</p>
@@ -39,19 +42,30 @@
                 <br>
                 <p><strong>Email:  </strong><a href="mailto:paveldolezal@gmail.com">paveldolezal@gmail.com</a></p>
                 <p><strong>Phone:  </strong>+420 XXX XXX XXX</p>
+
+                <div id="map-container">
+                    <iframe
+                        id="map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2565.0!2d14.4873926!3d49.9821956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b91b43f490f6f%3A0xed4b2af3cf2e8b16!2sBIOCEV!5e0!3m2!1sen!2scz!4v1700000000000"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="BIOCEV location on Google Maps">
+                    </iframe>
+                </div>
             </div>
         
             <div id="lab-container">
                 <img src="./images/lab_members.jpg" alt="Lab Members" width="2509" height="1673">
             </div>
-        </div>
+        </section>
     </main>
 
     <footer>
         <div class="gradient-bar"></div>
     </footer>
 
-    <script src="app.js"></script>
+    <script defer src="app.js"></script>
 </body>
 
 </html>
