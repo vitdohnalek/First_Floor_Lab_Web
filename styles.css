@@ -262,7 +262,7 @@ section {
     content: '';
     position: fixed;
     inset: 0;
-    background: rgba(17, 17, 19, 0.4);
+    background: rgba(17, 17, 19, 0.3);
     z-index: 0;
     pointer-events: none;
 }
@@ -336,7 +336,15 @@ section {
     transform: translateY(-50%);
     width: 45%;
     z-index: 0;
-    opacity: 1;
+    opacity: 0.9;
+    filter: sepia(0.9) brightness(1.3);
+}
+
+@media (max-width: 900px) {
+    .welcome {
+        padding-left: 4rem;
+        padding-right: 3rem;
+    }
 }
 
 @media (max-width: 640px) {
@@ -351,9 +359,38 @@ section {
     }
 
     .giardia {
+        padding-bottom: 25rem;
         width: 70%;
-        opacity: 0.7;
+        opacity: 0.9;
     }
+}
+
+/* Typing animation for homepage title */
+.typing-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--accent);
+    width: 0;
+    animation:
+        typing 1.8s steps(15, end) 0.5s forwards,
+        blink-caret 0.7s step-end infinite;
+}
+
+.typing-text.done {
+    border-right-color: transparent;
+    animation: none;
+    width: auto;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: var(--accent); }
+    50% { border-color: transparent; }
 }
 
 @keyframes fadeInUp {
@@ -433,8 +470,25 @@ section {
     border-radius: 50%;
     background: var(--bg-elevated);
     border: 2px solid var(--border-medium);
-    transition: background 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+    transition: background 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease, transform 0.2s ease;
     z-index: 2;
+    cursor: pointer;
+}
+
+/* Larger invisible click area */
+.timeline-dot::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.timeline-dot:hover {
+    transform: translateX(-50%) scale(1.4);
+    border-color: var(--accent);
 }
 
 .timeline-dot.active {
@@ -448,7 +502,7 @@ section {
 .timeline-dot[data-section="1"] { top: 50%; }
 .timeline-dot[data-section="2"] { top: 100%; }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
     .timeline-track {
         display: none;
     }
@@ -461,12 +515,18 @@ section {
     min-height: 100vh;
     max-width: 56rem;
     margin: 0 auto;
-    padding: 4rem 2rem;
+    padding: 4rem 2rem 4rem 5rem;
     opacity: 0;
     filter: blur(5px);
     transform: translateY(40px);
     transition: all 1.4s var(--ease-out);
     scroll-snap-align: start;
+}
+
+@media (max-width: 1100px) {
+    .research_section {
+        padding-left: 2rem;
+    }
 }
 
 @media (prefers-reduced-motion) {
@@ -590,6 +650,7 @@ section {
     padding: 1.75rem;
     text-align: center;
     flex: 0 1 260px;
+    min-width: 220px;
     max-width: 280px;
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }
@@ -677,7 +738,8 @@ section {
     background-color: var(--bg-surface);
     border: 1px solid var(--border-subtle);
     border-radius: 16px;
-    margin: 6rem 2rem 2rem;
+    margin: 6rem auto 2rem;
+    max-width: 64rem;
     padding: 2.5rem;
     padding-bottom: 3rem;
 }
@@ -768,7 +830,8 @@ section {
     background-color: var(--bg-surface);
     border: 1px solid var(--border-subtle);
     border-radius: 16px;
-    margin: 6rem 2rem 4rem;
+    margin: 6rem auto 4rem;
+    max-width: 64rem;
     padding: 2.5rem;
     padding-bottom: 3rem;
 }
@@ -863,7 +926,8 @@ section {
     background-color: var(--bg-surface);
     border: 1px solid var(--border-subtle);
     border-radius: 16px;
-    margin: 6rem 2rem 4rem;
+    margin: 6rem auto 4rem;
+    max-width: 64rem;
     padding: 2.5rem;
     display: flex;
     justify-content: space-between;

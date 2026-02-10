@@ -14,6 +14,16 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+
+    // TYPING ANIMATION — stop caret blinking after animation ends
+    var typingEl = document.querySelector('.typing-text');
+    if (typingEl) {
+        typingEl.addEventListener('animationend', function (e) {
+            if (e.animationName === 'typing') {
+                typingEl.classList.add('done');
+            }
+        });
+    }
 });
 
 // RESEARCH PAGE — Intersection Observer for scroll-reveal + timeline
@@ -42,7 +52,7 @@ if (researchSections.length > 0) {
 
     // Timeline progress tracking
     if (timelineProgress && timelineDots.length > 0) {
-        // Dot activation observer — fires when a section crosses 40% of viewport
+        // Dot activation observer
         var dotObserver = new IntersectionObserver(
             function (entries) {
                 entries.forEach(function (entry) {
@@ -62,6 +72,17 @@ if (researchSections.length > 0) {
 
         researchSections.forEach(function (el) {
             dotObserver.observe(el);
+        });
+
+        // Clickable timeline dots — scroll to corresponding section
+        timelineDots.forEach(function (dot) {
+            dot.addEventListener('click', function () {
+                var sectionIndex = parseInt(dot.getAttribute('data-section'), 10);
+                var targetSection = researchSections[sectionIndex];
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
         });
 
         // Scroll-driven progress bar
